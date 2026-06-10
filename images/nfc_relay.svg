@@ -1,0 +1,105 @@
+<svg viewBox="0 0 780 500" xmlns="http://www.w3.org/2000/svg" font-family="Trebuchet MS, Verdana, sans-serif">
+  <defs>
+    <pattern id="dots4" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="3.5" cy="3.5" r="1.3" fill="#000" opacity="0.18"/>
+    </pattern>
+    <marker id="arr4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#000"/>
+    </marker>
+    <g id="car4">
+      <path d="M0,28 L10,8 Q14,0 24,0 L66,0 Q76,0 80,8 L90,28 L96,30 L96,44 L84,44 A10,10 0 0,1 64,44 L32,44 A10,10 0 0,1 12,44 L0,44 Z" fill="#fff" stroke="#000" stroke-width="2.5"/>
+      <circle cx="22" cy="44" r="9" fill="#fff" stroke="#000" stroke-width="2.5"/>
+      <circle cx="74" cy="44" r="9" fill="#fff" stroke="#000" stroke-width="2.5"/>
+      <line x1="26" y1="8" x2="20" y2="26" stroke="#000" stroke-width="2"/>
+      <line x1="48" y1="8" x2="48" y2="26" stroke="#000" stroke-width="2"/>
+    </g>
+    <g id="crook4">
+      <circle cx="0" cy="0" r="16" fill="#fff" stroke="#000" stroke-width="2.5"/>
+      <path d="M-16,-3 A16,16 0 0,1 16,-3 L11,-7 L5,-2 L-1,-8 L-7,-2 L-13,-7 Z" fill="#1a1a1a"/>
+      <line x1="-9" y1="2" x2="-2" y2="4" stroke="#000" stroke-width="2"/>
+      <line x1="2" y1="4" x2="9" y2="2" stroke="#000" stroke-width="2"/>
+      <path d="M-5,10 Q0,7 5,10" fill="none" stroke="#000" stroke-width="2"/>
+      <path d="M-11,16 L11,16 L16,52 L-16,52 Z" fill="#1a1a1a"/>
+      <line x1="14" y1="22" x2="30" y2="10" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <g id="antenna4">
+      <rect x="-5" y="0" width="10" height="26" rx="3" fill="#fff" stroke="#000" stroke-width="2.5"/>
+      <line x1="0" y1="0" x2="0" y2="-16" stroke="#000" stroke-width="2.5"/>
+      <circle cx="0" cy="-18" r="3" fill="#000"/>
+    </g>
+  </defs>
+
+  <rect x="1" y="1" width="778" height="498" fill="#fff" stroke="#000" stroke-width="2"/>
+
+  <rect x="14" y="12" width="430" height="34" rx="8" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <circle cx="36" cy="29" r="7" fill="none" stroke="#000" stroke-width="2.5"/>
+  <line x1="41" y1="34" x2="52" y2="43" stroke="#000" stroke-width="2.5"/>
+  <text x="62" y="35" font-size="19" font-weight="bold">Relay-атака на цифровой ключ машины</text>
+
+  <!-- Panel 1 -->
+  <rect x="14" y="58" width="752" height="200" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <rect x="14" y="58" width="752" height="30" fill="url(#dots4)" stroke="#000" stroke-width="2.5"/>
+  <text x="390" y="79" font-size="15" font-weight="bold" text-anchor="middle">NFC/BLE: «УДЛИНЯЕМ» РАДИОКАНАЛ</text>
+
+  <!-- house + phone -->
+  <path d="M40,150 L100,110 L160,150 L160,225 L40,225 Z" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <rect x="84" y="180" width="32" height="45" fill="url(#dots4)" stroke="#000" stroke-width="2"/>
+  <rect x="120" y="155" width="22" height="38" rx="4" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <line x1="126" y1="186" x2="136" y2="186" stroke="#000" stroke-width="2"/>
+  <text x="100" y="245" font-size="13" text-anchor="middle">телефон-ключ дома</text>
+
+  <!-- crook 1 with antenna -->
+  <use href="#crook4" transform="translate(232,150)"/>
+  <use href="#antenna4" transform="translate(268,148)"/>
+  <text x="244" y="225" font-size="13" text-anchor="middle">сообщник №1</text>
+  <text x="244" y="241" font-size="13" text-anchor="middle">у двери</text>
+
+  <!-- relay waves -->
+  <line x1="290" y1="150" x2="438" y2="150" stroke="#000" stroke-width="2.5" stroke-dasharray="8,6" marker-end="url(#arr4)" marker-start="url(#arr4)"/>
+  <text x="364" y="138" font-size="12" font-weight="bold" text-anchor="middle">ретранслируют сигнал</text>
+  <text x="364" y="170" font-size="12" text-anchor="middle">хоть на километры</text>
+
+  <!-- crook 2 -->
+  <use href="#antenna4" transform="translate(448,148)"/>
+  <use href="#crook4" transform="translate(486,150)"/>
+  <text x="474" y="225" font-size="13" text-anchor="middle">сообщник №2</text>
+  <text x="474" y="241" font-size="13" text-anchor="middle">у машины</text>
+
+  <!-- car + bubble -->
+  <use href="#car4" transform="translate(560,160)"/>
+  <path d="M640,120 L630,138 L650,134 Z" fill="#fff" stroke="#000" stroke-width="2"/>
+  <rect x="586" y="84" width="172" height="42" rx="12" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <text x="672" y="102" font-size="13" font-weight="bold" text-anchor="middle">«Ключ рядом!</text>
+  <text x="672" y="118" font-size="13" font-weight="bold" text-anchor="middle">Открываюсь...»</text>
+  <text x="608" y="245" font-size="13" font-weight="bold" text-anchor="middle">машина уехала</text>
+
+  <!-- Panel 2 -->
+  <rect x="14" y="272" width="752" height="200" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <rect x="14" y="272" width="752" height="30" fill="url(#dots4)" stroke="#000" stroke-width="2.5"/>
+  <text x="390" y="293" font-size="15" font-weight="bold" text-anchor="middle">UWB: МЕРЯЕМ ВРЕМЯ ПОЛЁТА СИГНАЛА</text>
+
+  <!-- same setup -->
+  <path d="M40,364 L100,324 L160,364 L160,439 L40,439 Z" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <rect x="120" y="369" width="22" height="38" rx="4" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <line x1="126" y1="400" x2="136" y2="400" stroke="#000" stroke-width="2"/>
+  <use href="#crook4" transform="translate(232,364)"/>
+  <use href="#antenna4" transform="translate(268,362)"/>
+  <line x1="290" y1="364" x2="438" y2="364" stroke="#000" stroke-width="2.5" stroke-dasharray="8,6" marker-end="url(#arr4)" marker-start="url(#arr4)"/>
+  <use href="#antenna4" transform="translate(448,362)"/>
+  <use href="#crook4" transform="translate(486,364)"/>
+
+  <!-- car refuses -->
+  <use href="#car4" transform="translate(560,374)"/>
+  <path d="M640,334 L630,352 L650,348 Z" fill="#fff" stroke="#000" stroke-width="2"/>
+  <rect x="566" y="306" width="196" height="44" rx="12" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <text x="664" y="324" font-size="12" font-weight="bold" text-anchor="middle">«Сигнал летел слишком</text>
+  <text x="664" y="340" font-size="12" font-weight="bold" text-anchor="middle">долго для 10 м. ОТКАЗ!»</text>
+  <!-- cross over crooks -->
+  <line x1="200" y1="320" x2="520" y2="430" stroke="#000" stroke-width="5"/>
+  <line x1="520" y1="320" x2="200" y2="430" stroke="#000" stroke-width="5"/>
+  <text x="608" y="459" font-size="13" font-weight="bold" text-anchor="middle">машина на месте</text>
+
+  <!-- moral -->
+  <rect x="14" y="482" width="752" height="0" fill="none"/>
+  <text x="390" y="491" font-size="12.5" font-style="italic" text-anchor="middle">UWB меряет дистанцию по времени полёта радиоволны — быстрее света сигнал не ретранслировать.</text>
+</svg>
